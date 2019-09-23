@@ -1,14 +1,19 @@
-
+b = ""
 def fizzbuzz(number)
   if number.to_i % 15 == 0
-    puts("fizzbuzz")
+    b = "fizzbuzz"
+    return('fizzbuzz')
   elsif number.to_i % 5 == 0
-    puts("buzz")
+    b = "buzz"
+    return('buzz')
   elsif number.to_i % 3 == 0
-    puts("fizz")
+    b = "fizz"
+    return('fizz')
   else
-    puts(number)
+    b = "#{number}"
+    return(number)
   end
 end
+
 a = gets.chomp
-1.upto(100) {|x| fizzbuzz(x)}
+1.upto(100) {|x| puts(fizzbuzz(x))}
